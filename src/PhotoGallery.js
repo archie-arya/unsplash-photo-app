@@ -14,7 +14,7 @@ function PhotoGallery() {
     // Function to fetch photos
     const fetchPhotos = async (query) => {
       try {
-        const apiKey = 'VmWWqMyO4w-VCAv85om_FMqgVGD9cvfqbQYWyFm1l2M'; // Replace with your Unsplash API key
+        const apiKey = 'VmWWqMyO4w-VCAv85om_FMqgVGD9cvfqbQYWyFm1l2M'; 
         const apiUrl = query
           ? `https://api.unsplash.com/search/photos?query=${query}&client_id=${apiKey}`
           : `https://api.unsplash.com/photos?client_id=${apiKey}`;

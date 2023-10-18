@@ -2,10 +2,10 @@ import React from 'react';
 
 function ImageModal({ image, userThumbnail, onClose }) {
   const downloadImage = () => {
-    // Create an anchor element to trigger the download
+    
     const link = document.createElement('a');
     link.href = image.urls.full;
-    link.download = 'downloaded_image.jpg'; // You can customize the download filename
+    link.download = 'downloaded_image.jpg'; 
     link.target = '_blank';
     link.rel = 'noopener noreferrer';
     link.click();
@@ -28,7 +28,7 @@ function ImageModal({ image, userThumbnail, onClose }) {
                 className="user-thumbnail"
               />
             ) : (
-              <div>Loading...</div> // You can provide a loading indicator here
+              <div>Loading...</div> 
             )}
             <div className="username-details">
               <h3>{image.user.name}</h3>
