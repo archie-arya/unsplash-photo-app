@@ -1,38 +1,116 @@
-.App {
+/* App.css */
+
+/* Homepage Styles */
+.homepage {
   text-align: center;
+  padding: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.title {
+  font-size: 24px; /* Adjust the font size as needed */
+  font-weight: bold;
+  margin-right: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.search-bar {
+  width: 300px; /* Adjust the width as needed */
+  padding: 10px;
+  font-size: 16px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.photo-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjust the minimum photo width as needed */
+  gap: 20px; /* Adjust the gap between photos as needed */
+  margin-top: 20px;
+}
+
+.photo-card {
   display: flex;
   flex-direction: column;
   align-items: center;
+  border: 1px solid #ddd; /* Add a border to each photo card */
+  padding: 10px;
+  background-color: #f8f8f8; /* Background color for the card */
+  border-radius: 5px;
+}
+
+.photo-card img {
+  max-width: 100%;
+  max-height: 200px; /* Limit the maximum height of the photo */
+  object-fit: cover;
+}
+
+.image-details {
+  margin-top: 10px;
+}
+
+.user-thumbnail {
+  width: 30px; /* Adjust the user thumbnail size as needed */
+  height: 30px;
+  border-radius: 50%; /* Make it circular */
+}
+
+/* Add other CSS styles as needed for image details */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  z-index: 1;
 }
 
-.App-link {
-  color: #61dafb;
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  width: 80%;
+  max-width: 600px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.user-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
 }
+
+.user-info img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.download-likes {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.tags {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.tags p {
+  font-style: italic;
+}
+
+/* App.css */
+
+/* ... (other styles) */
+
+.clicked-image {
+  max-width: 100%;
+  max-height: 200px; /* Adjust the size as needed */
+  object-fit: contain; /* Adjust the fit as needed */
+  display: block;
+  margin: 0 auto; /* Center the image */
+}
+
